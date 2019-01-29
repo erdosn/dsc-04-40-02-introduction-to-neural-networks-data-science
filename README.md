@@ -8,7 +8,13 @@ Neural networks are becoming increasing more popular and are responsible for som
 ## Objectives
 You will be able to:
 * Explain what neural networks are, and what they can achieve
+    * a machine learning, good for unstructed data, 
 * Explain the basic architecture of a neural network
+    * the parts includeL input layer, hidden layer, output layer, and weights in the form of edges
+    * What is a hidden layer? Where does it come from?
+        * Comes from the previous layer (input or hidden)
+        * Created from linear combinations of the nodes and their weights of the previous layer.
+        * Weights are decided by using Gradient Descent.
 
 ## What is a neural network?
 
@@ -40,6 +46,10 @@ In our previous example, we have 3 input units, hidden layer with 4 units and 1 
 
 ![title](figures/Deeper_network.jpg)
 
+### Adding a layer is the same as
+* Adding 'better' features
+* Adding a layer of new features that come from the previous layer's features
+
 And there is one more thing that makes deep learning extremely powerful: unlike many other statistical and machine learning techniques, deep learning can deal extremely well with **unstructured data**.
 
 
@@ -62,7 +72,7 @@ Types or Neural networks:
 - Standard neural networks
 - Convolutional neural networks (input = images, video)
 - Recurrent neural networks (input = audio files, text, time series data)
-- Generative adversarial networks
+- Generative adversarial networks (GANs)
 
 ## An introductory example
 
@@ -103,7 +113,7 @@ where 1 means that the image contains a Santa, 0 means there is no Santa in the 
 
 ### Logistic regression as a neural network
 
-So how will we be able to predict wheather y is 0 or 1 for a certain image? You might remember from logistic regression models that the eventual predictor, $\hat y$, is generally never exactly 0 or 1, but some value in between. 
+So how will we be able to predict whether y is 0 or 1 for a certain image? You might remember from logistic regression models that the eventual predictor, $\hat y$, is generally never exactly 0 or 1, but some value in between. 
 
 Formally, you'll denote that $ \hat y = P(y=1 \mid x) $. Remember that $x \in  \mathbb{R}^n $. As in classical (logistic) regression we'll need some parameters. 
 
@@ -170,7 +180,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_32_0.png)
+![png](index_files/index_33_0.png)
 
 
 Congratulations! You have gotten to the point where you have the expression for the cost function and the loss function. The step we have just taken is called **forward propagation**.
